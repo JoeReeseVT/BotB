@@ -56,5 +56,10 @@ public class Conductor : MonoBehaviour
 
         //determine how many beats since the song started
         songPosInBeats = songPosition / secPerBeat;
+
+        //If the button is pushed with the correct beat, then send an event
+        /*
+         * Event code TBD
+        */
     }
 }
