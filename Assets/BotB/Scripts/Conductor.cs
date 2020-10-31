@@ -63,9 +63,9 @@ public class Conductor : MonoBehaviour
 
 
         //Just debugging dont mind me
-        Debug.Log("Started Song Playback");
+        //Debug.Log("Started Song Playback");
         for (int i = 0; i < song.noteChart[0].notes.Length; i++) {
-            Debug.Log("Note at " + song.noteChart[0].notes[i]);
+            //Debug.Log("Note at " + song.noteChart[0].notes[i]);
         }
     }
 
@@ -79,7 +79,7 @@ public class Conductor : MonoBehaviour
 
             if (notePosInSeconds(i, noteListPos[i]) < positionInSeconds) {
                 noteListPos[i] = nextNote(i);
-                Debug.Log("Passed " + Enum.GetName(typeof(Notes), i));
+                //Debug.Log("Passed " + Enum.GetName(typeof(Notes), i));
             }
 
             /*float newTimeUntil = (float)(notePosInSeconds(i, nextNote(noteListPos[i])) - positionInSeconds);
