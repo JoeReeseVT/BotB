@@ -12,6 +12,7 @@ public class Conductor : MonoBehaviour
     float currentBeatsPerMinute;
     double currentSecondsPerBeat;
 
+    // What our actual position is in the audio track
     double positionInSeconds;
     double positionInMeasures;
     double positionInBeats;
@@ -45,12 +46,13 @@ public class Conductor : MonoBehaviour
     public void loadSong(SongMetadata newSong)
     {
         song = newSong;
-        noteListPos = new int[song.noteChart.Length];
-        timeOfLast = new float[song.noteChart.Length];
+        noteListPos = new int[song.noteChart.Length];  // noteChart is array of noteList, which is a struct
+        timeOfLast = new float[song.noteChart.Length]; // These 'new's all init to 0
         timeOfNext = new float[song.noteChart.Length];
         BPMSwitchCount = 0;
         currentBeatsPerMinute = song.Tempos[BPMSwitchCount];
-
+        currentSecondsPerBeat = 60d/currentBeatsPerMinute;
+        
         musicSource.clip = song.audioFile;
         musicSource.loop = true;
 
@@ -59,27 +61,22 @@ public class Conductor : MonoBehaviour
         isPaused = false;
 
         dspSongTime = (float)AudioSettings.dspTime;
-
-
-
-        //Just debugging dont mind me
-        //Debug.Log("Started Song Playback");
-        for (int i = 0; i < song.noteChart[0].notes.Length; i++) {
-            //Debug.Log("Note at " + song.noteChart[0].notes[i]);
-        }
     }
 
     private void updatePositions() {
         //works
         positionInSeconds = CurrentTime();
 
-        for (int i = 0; i<1; i++)
-        //for ( int i = 0; i < timeUntil.Length; i++ )
-        {
+        //for ( int noteType = 0; noteType < timeUntil.Length; noteType++ )
+        //{
 
-            if (notePosInSeconds(i, noteListPos[i]) < positionInSeconds) {
-                noteListPos[i] = nextNote(i);
-                //Debug.Log("Passed " + Enum.GetName(typeof(Notes), i));
+            // If our positionInSeconds has passed the time of the current note we're on, we need to fetch the next note time
+            double notePosSec = notePosInSeconds((int)MeasureStart, noteListPos[(int)MeasureStart]);
+            if (positionInSeconds >= notePosSec) {
+                // Move our "cursor" to the next note in the sequence for this noteType
+                noteListPos[(int)MeasureStart] = nextNote((int)MeasureStart);
+                //Debug.Log("Passed " + Enum.GetName(typeof(Notes), noteType));
+                Debug.Log("Going to next note at time " + positionInSeconds + " sec (notePos " + notePosSec + " sec");
             }
 
             /*float newTimeUntil = (float)(notePosInSeconds(i, nextNote(noteListPos[i])) - positionInSeconds);
@@ -101,17 +98,20 @@ public class Conductor : MonoBehaviour
                 timeSince[i] = (float) (positionInSeconds - notePosInSeconds(i, noteListPos[i]));
             }
             */
-        }
+        //}
         //positionInMeasures = 
         //positionInBeats = 
     }
 
     int nextNote(int noteType) {
-        if (noteListPos[noteType] + 1 < song.noteChart[noteType].notes.Length - 1)
+        // Make sure we don't go out of bounds
+        if (noteListPos[noteType] + 1 < song.noteChart[noteType].notes.Length)
         {
+            Debug.Log("New note pos is " + (noteListPos[noteType] + 1));
             return noteListPos[noteType] + 1;
         }
         else {
+            Debug.Log("New note pos is 0 (RESET)");
             return 0;
         }
     }
@@ -119,9 +119,10 @@ public class Conductor : MonoBehaviour
     public double notePosInSeconds(int noteType, int noteCount)
     {
         //TODO: rewrite this so it plays nice with BPM changes
-        if (noteType <= song.noteChart.Length - 1 && noteCount <= song.noteChart[noteType].notes.Length - 1)
+        if (noteType < song.noteChart.Length && noteCount < song.noteChart[noteType].notes.Length)
         {
-            return ((double)song.noteChart[noteType].notes[noteCount] * currentSecondsPerBeat) / ((double)song.noteChart[noteType].ticksPerQuarterNote );
+            double outValue = ((double)song.noteChart[noteType].notes[noteCount] * currentSecondsPerBeat) / ((double)song.noteChart[noteType].ticksPerQuarterNote );
+            return outValue;
         }
         else {
             return -1;
