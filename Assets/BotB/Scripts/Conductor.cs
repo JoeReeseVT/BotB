@@ -16,8 +16,8 @@ public class Conductor : MonoBehaviour
     double positionInMeasures;
     double positionInBeats;
 
-    float[] timeSince;
-    float[] timeUntil;
+    float[] timeOfLast;
+    float[] timeOfNext;
 
     //the song we are playing
     public SongMetadata song;
@@ -46,8 +46,8 @@ public class Conductor : MonoBehaviour
     {
         song = newSong;
         noteListPos = new int[song.noteChart.Length];
-        timeSince = new float[song.noteChart.Length];
-        timeUntil = new float[song.noteChart.Length];
+        timeOfLast = new float[song.noteChart.Length];
+        timeOfNext = new float[song.noteChart.Length];
         BPMSwitchCount = 0;
         currentBeatsPerMinute = song.Tempos[BPMSwitchCount];
 
@@ -64,7 +64,7 @@ public class Conductor : MonoBehaviour
 
         //Just debugging dont mind me
         Debug.Log("Started Song Playback");
-        for (int i = 0; i < song.noteChart[0].notes.Length - 1; i++) {
+        for (int i = 0; i < song.noteChart[0].notes.Length; i++) {
             Debug.Log("Note at " + song.noteChart[0].notes[i]);
         }
     }
@@ -76,10 +76,16 @@ public class Conductor : MonoBehaviour
         for (int i = 0; i<1; i++)
         //for ( int i = 0; i < timeUntil.Length; i++ )
         {
-            float newTimeUntil = (float)(notePosInSeconds(i, nextNote(noteListPos[i])) - positionInSeconds);
+
+            if (notePosInSeconds(i, noteListPos[i]) < positionInSeconds) {
+                noteListPos[i] = nextNote(i);
+                Debug.Log("Passed " + Enum.GetName(typeof(Notes), i));
+            }
+
+            /*float newTimeUntil = (float)(notePosInSeconds(i, nextNote(noteListPos[i])) - positionInSeconds);
             if (newTimeUntil <= 0)
             {
-                noteListPos[i] = nextNote(noteListPos[i]);
+                noteListPos[i] = nextNote(i);
                 //why doesnt it work lmao
 
                 timeSince[i] = newTimeUntil;
@@ -94,6 +100,7 @@ public class Conductor : MonoBehaviour
                 timeUntil[i] = newTimeUntil;
                 timeSince[i] = (float) (positionInSeconds - notePosInSeconds(i, noteListPos[i]));
             }
+            */
         }
         //positionInMeasures = 
         //positionInBeats = 
