@@ -5,9 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class ChooseSong : MonoBehaviour
 {
-    public int SongNumber;
-    public void changeToScene(int sceneToChangeTo)
+    public SongMetadata Song;
+    public void changeToScene(int ScenetoChangeto)
     {
-        SceneManager.LoadScene(sceneToChangeTo);
+        infoStruct info = new infoStruct(ScenetoChangeto, Song);
+        SceneManager.LoadScene(info.scene);
+    }
+}
+
+struct infoStruct
+{
+    public int scene;
+    public SongMetadata song;
+    public infoStruct(int scenenum, SongMetadata whatsong)
+    {
+        scene = scenenum;
+        song = whatsong;
     }
 }
