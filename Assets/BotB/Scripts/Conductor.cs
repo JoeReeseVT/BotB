@@ -67,38 +67,18 @@ public class Conductor : MonoBehaviour
         //works
         positionInSeconds = CurrentTime();
 
-        //for ( int noteType = 0; noteType < timeUntil.Length; noteType++ )
-        //{
+        for ( int noteType = 0; noteType < noteListPos.Length; noteType++ )
+        {
 
             // If our positionInSeconds has passed the time of the current note we're on, we need to fetch the next note time
-            double notePosSec = notePosInSeconds((int)MeasureStart, noteListPos[(int)MeasureStart]);
-            if (positionInSeconds >= notePosSec) {
+            double notePosSec = notePosInSeconds(noteType, noteListPos[noteType]);
+            if (song.noteChart[noteType].notes.Length!=0 && nextNoteDist(noteType) <= 0) {
                 // Move our "cursor" to the next note in the sequence for this noteType
-                noteListPos[(int)MeasureStart] = nextNote((int)MeasureStart);
+                noteListPos[noteType] = nextNote(noteType);
                 //Debug.Log("Passed " + Enum.GetName(typeof(Notes), noteType));
-                Debug.Log("Going to next note at time " + positionInSeconds + " sec (notePos " + notePosSec + " sec");
+                //Debug.Log("Going to next " + Enum.GetName(typeof(Notes), noteType) + " at time " + positionInSeconds + " sec (notePos " + notePosSec + " sec");
             }
-
-            /*float newTimeUntil = (float)(notePosInSeconds(i, nextNote(noteListPos[i])) - positionInSeconds);
-            if (newTimeUntil <= 0)
-            {
-                noteListPos[i] = nextNote(i);
-                //why doesnt it work lmao
-
-                timeSince[i] = newTimeUntil;
-                timeUntil[i] = (float) (notePosInSeconds(i, nextNote(noteListPos[i])) - positionInSeconds);
-
-                Debug.Log("Chart event : " + Enum.GetName(typeof(Notes), i) + ". time since = " + timeSince[i] + ". time until = " + timeUntil[i] + ". Note list pos = " + noteListPos[i] + ", next note = " + nextNote(noteListPos[i]) + " note time " + notePosInSeconds(i, nextNote(noteListPos[i])) + " note count " + song.noteChart[i].notes.Length);
-                //TODO: fire an event
-                //      If that note was a BPM change, call BPMChange.
-
-            }
-            else {
-                timeUntil[i] = newTimeUntil;
-                timeSince[i] = (float) (positionInSeconds - notePosInSeconds(i, noteListPos[i]));
-            }
-            */
-        //}
+        }
         //positionInMeasures = 
         //positionInBeats = 
     }
@@ -107,12 +87,43 @@ public class Conductor : MonoBehaviour
         // Make sure we don't go out of bounds
         if (noteListPos[noteType] + 1 < song.noteChart[noteType].notes.Length)
         {
-            Debug.Log("New note pos is " + (noteListPos[noteType] + 1));
+            //Debug.Log("New note pos is " + (noteListPos[noteType] + 1));
             return noteListPos[noteType] + 1;
         }
         else {
-            Debug.Log("New note pos is 0 (RESET)");
+            //Debug.Log("New note pos is 0 (RESET)");
             return 0;
+        }
+    }
+
+    public float nearestNoteDist(int noteType) {
+        float last = lastNoteDist(noteType);
+        float next = nextNoteDist(noteType);
+        if (Mathf.Abs(last) < next)
+        {
+            return last;
+        }
+        else
+        {
+            return next;
+        }
+    }
+
+    public float lastNoteDist(int noteType) {
+        return distanceToNote(noteType, noteListPos[noteType]-1);
+    }
+
+    public float nextNoteDist(int noteType) {
+        return distanceToNote(noteType, noteListPos[noteType]);
+    }
+
+    public float distanceToNote(int noteType, int noteCount) {
+        if (song.noteChart[noteType].notes.Length == 0 || song.noteChart[noteType].notes.Length - 1 < noteCount || noteCount <= -1)
+        {
+            return -1f;
+        }
+        else {
+            return (float)(notePosInSeconds(noteType, noteCount) - positionInSeconds);
         }
     }
 
@@ -149,6 +160,6 @@ public class Conductor : MonoBehaviour
     }
 
     private double CurrentTime() {
-        return AudioSettings.dspTime - dspSongTime;
+        return AudioSettings.dspTime - dspSongTime - song.latencyComp;
     }
 }

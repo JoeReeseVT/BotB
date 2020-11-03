@@ -16,6 +16,7 @@ public class SongMetadata : ScriptableObject
     //https://docs.unity3d.com/ScriptReference/AudioClip.html
     public AudioClip audioFile;
     public TextAsset songMidi;
+    public float latencyComp;
 
     //Tracks all instances of a given note.
     //Not actually a List, but I couldn't think of a better name. Sorry if BuildNoteChart() is a bit confusing because of that.
