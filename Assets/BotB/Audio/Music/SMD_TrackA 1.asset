@@ -16,7 +16,7 @@ MonoBehaviour:
   songSubtitle: Hella metal.
   audioFile: {fileID: 8300000, guid: 8231545c130bc684989709d48c137a81, type: 3}
   songMidi: {fileID: 4900000, guid: 10711b74659d3c4459314eb9fce4a602, type: 3}
-  latencyComp: 0.15
+  latencyComp: 0.17
   noteChart:
   - notesCount: 78
     noteID: 0
