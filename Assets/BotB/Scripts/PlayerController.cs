@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Kick!");
 
+        /*
         //placeholder for dash. don't let this ship!
 
         if (health <= 0)
@@ -82,11 +83,14 @@ public class PlayerController : MonoBehaviour
         else {
             Debug.Log("Player tried to dash but was " + conductor.nearestNoteDist((int)Notes.DrumKick) + " seconds off.");
         }
+        */
 
     }
 
     public void OnSnare()
     {
+
+        /*
         if (health <= 0)
         {
             return;
@@ -97,6 +101,7 @@ public class PlayerController : MonoBehaviour
 
             cameraScript.addCameraShake(.6f);
         }
+        */
         Debug.Log("Snare!");
     }
 
