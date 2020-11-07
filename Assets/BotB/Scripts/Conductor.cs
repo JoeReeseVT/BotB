@@ -22,6 +22,11 @@ public class Conductor : MonoBehaviour
 
     //the song we are playing
     public SongMetadata song;
+    public SongMetadata song2;
+    //public SongMetadata song3;
+
+    //Tells us which song we are going to play
+    //static int songint;
 
     //component that will play the music
     private AudioSource musicSource;
@@ -39,8 +44,20 @@ public class Conductor : MonoBehaviour
     {
         isPaused = true;
         musicSource = gameObject.AddComponent<AudioSource>();
-        loadSong(song);
-
+        if (ChooseSong.songint == 1)
+        {
+            loadSong(song);
+        }
+        else if (ChooseSong.songint == 2)
+        {
+            loadSong(song2);
+        }
+        /*
+        else if (songint == 3)
+        {
+            loadSong(song3);
+        }
+        */
     }
 
     public void loadSong(SongMetadata newSong)

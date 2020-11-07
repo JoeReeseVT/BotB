@@ -1789,6 +1789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   song: {fileID: 11400000, guid: 58707d2258368784b837c9eebb9a360a, type: 2}
+  song2: {fileID: 11400000, guid: 359bb4dc2d48af04d8776bd1db41b769, type: 2}
 --- !u!4 &1134038287
 Transform:
   m_ObjectHideFlags: 0
