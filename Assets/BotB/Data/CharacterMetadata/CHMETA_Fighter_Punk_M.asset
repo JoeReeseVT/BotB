@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c089939ed9c4d6f4eb787bd6d09994fa, type: 3}
-  m_Name: CHMETA_Fighter_Prog 1
+  m_Name: CHMETA_Fighter_Punk_M
   m_EditorClassIdentifier: 
-  charName: idk his name
-  charDescription: prog rock dude
-  charMesh: {fileID: 7303129338274639898, guid: ff0643f6fd4f4a240ab5b3688320a13a,
+  charName: punk dude
+  charDescription: yeah thats his name
+  charMesh: {fileID: 8248599791569816781, guid: be28ec8ddb4b8aa48879e8775565551b,
     type: 3}
-  charMat: {fileID: 2100000, guid: a233da68660fa8e459ee043c5128315a, type: 2}
-  charAvatar: {fileID: 9000000, guid: ff0643f6fd4f4a240ab5b3688320a13a, type: 3}
+  charMat: {fileID: 2100000, guid: 8180c6d4574808e48876c08fa7f2629a, type: 2}
+  charAvatar: {fileID: 9000000, guid: be28ec8ddb4b8aa48879e8775565551b, type: 3}
