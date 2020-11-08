@@ -1882,6 +1882,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1502193713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7968036972360697060, guid: 7680bd2ca66e43c41a2248b645f62fd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1769181759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1502193718 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7968036972360697056, guid: 7680bd2ca66e43c41a2248b645f62fd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1769181759}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1514170667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,7 +2486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterA: {fileID: 572873254}
-  characterB: {fileID: 0}
+  characterB: {fileID: 1502193718}
   cameraTrackSpeed: 4
   cameraLookSpeed: 10
   pannedOutDistance: 6
@@ -2729,7 +2741,7 @@ PrefabInstance:
         type: 3}
       propertyPath: otherPlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1502193713}
     - target: {fileID: 7968036972360697070, guid: 7680bd2ca66e43c41a2248b645f62fd1,
         type: 3}
       propertyPath: healthBar
