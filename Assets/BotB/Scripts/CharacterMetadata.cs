@@ -11,8 +11,9 @@ public class CharacterMetadata : ScriptableObject
     public string charName;
     public string charDescription;
 
-    public Mesh charMesh;
+    public SkinnedMeshRenderer charMesh;
     public Material charMat;
+    public Avatar charAvatar;
 
     //If we have character specific audio barks/exertion noises, we'll need to reference whatever data container we do for that here:
     
