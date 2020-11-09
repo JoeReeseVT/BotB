@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HurtboxTest : MonoBehaviour
+public class Hurtbox : MonoBehaviour
 {
 
     public float hitDelay;
-    private float hitTimer = 0;
+    private float lastHitTime = 0;
 
     void Update()
     {
-        // Increment the hit timer each frame
-        hitTimer += Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,11 +20,13 @@ public class HurtboxTest : MonoBehaviour
             return;
 
         // Prevent another hit if 'hitDelay' seconds has not elapsed
-        if (hitTimer < hitDelay)
+        if (Time.deltaTime - lastHitTime > hitDelay)
+        {
             return;
+        }
 
         // On hit, reset the hit timer
-        hitTimer = 0;
+        lastHitTime = Time.deltaTime;
         // STUB for testing collision
         Debug.Log("Collision detected by Hurtbox");
     }
