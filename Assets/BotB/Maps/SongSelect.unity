@@ -206,10 +206,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 447337775}
         m_MethodName: songPick
-        m_Mode: 3
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 359bb4dc2d48af04d8776bd1db41b769,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SongMetadata, Assembly-CSharp
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
@@ -264,7 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8d5cf3c2a708648b8e0034dd98b72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Song: {fileID: 11400000, guid: 58707d2258368784b837c9eebb9a360a, type: 2}
 --- !u!1 &510782114
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,10 +350,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 510782119}
         m_MethodName: songPick
-        m_Mode: 3
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 58707d2258368784b837c9eebb9a360a,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SongMetadata, Assembly-CSharp
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -408,7 +409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8d5cf3c2a708648b8e0034dd98b72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Song: {fileID: 0}
 --- !u!1 &535417290
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,10 +627,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1119815128}
         m_MethodName: songPick
-        m_Mode: 3
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 359bb4dc2d48af04d8776bd1db41b769,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SongMetadata, Assembly-CSharp
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
@@ -685,7 +686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8d5cf3c2a708648b8e0034dd98b72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Song: {fileID: 0}
 --- !u!1 &1149627664
 GameObject:
   m_ObjectHideFlags: 0

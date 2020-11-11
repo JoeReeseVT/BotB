@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ChooseSong : MonoBehaviour
 {
-    public static int songint;
-    public SongMetadata Song;
-    public void songPick(int songnum)
+    //public static int choosesong;
+    public static SongMetadata choosesong;
+    public void songPick(SongMetadata songpick)
     {
-        songint = songnum;
+        choosesong = songpick;
         
         SceneManager.LoadScene(1);
     }
