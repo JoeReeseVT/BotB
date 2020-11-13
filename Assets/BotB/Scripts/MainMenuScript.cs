@@ -20,21 +20,6 @@ public class MainMenuScript : MonoBehaviour
 
     void Update()
     {
-        /*
-        switch (currentState)
-        {
-            case MenuStates.Main:
-                MainMenu.SetActive(true);
-                ControlsMenu.SetActive(false);
-                break;
-
-            case MenuStates.Controls:
-                ControlsMenu.SetActive(true);
-                MainMenu.SetActive(false);
-                break;
-
-        }
-        */
 
         if (currentState == MenuStates.Main)
         {
