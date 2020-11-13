@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SelectionScript : MonoBehaviour
 {
+
+
     //menu states
     public enum MenuStates { Player1, Player2, Song };
     public MenuStates currentState;
@@ -13,6 +15,10 @@ public class SelectionScript : MonoBehaviour
     public GameObject P1Menu;
     public GameObject P2Menu;
     public GameObject SongMenu;
+
+    public static CharacterMetadata Player1Choice;
+    public static CharacterMetadata Player2Choice;
+
 
     void Awake()
     {
@@ -49,16 +55,19 @@ public class SelectionScript : MonoBehaviour
         currentState = MenuStates.Player1;
     }
     */
+  
 
-    public void OnP2()
+    public void OnP2(CharacterMetadata Player_1)
     {
-        UnityEngine.Debug.Log("Menu button pressed");
+        UnityEngine.Debug.Log("P1 button pressed");
+        Player1Choice = Player_1;
         currentState = MenuStates.Player2;
     }
 
-    public void OnSong()
+    public void OnSong(CharacterMetadata Player_2)
     {
-        UnityEngine.Debug.Log("Menu button pressed");
+        UnityEngine.Debug.Log("P2 button pressed");
+        Player2Choice = Player_2;
         currentState = MenuStates.Song;
     }
 }
