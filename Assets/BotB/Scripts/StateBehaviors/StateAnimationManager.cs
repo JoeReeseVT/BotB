@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class StateAnimationManager : StateMachineBehaviour
 {
+
+    // This class allows us to take a data-driven approach to affecting animation state machine parameter changes through
+    // gameplay state machine states.
+
+
     [System.Serializable]
     public struct BotBAnimationStateTriggers {
         public bool Dash_A;
@@ -14,43 +19,56 @@ public class StateAnimationManager : StateMachineBehaviour
         public bool HitReact_GuardBlock;
     }
 
-    public bool canDoLocomotion;
-
+    private Animator animStateMachine;
     public BotBAnimationStateTriggers animTriggers;
+    public bool locomotionIsAllowed;
+    private PlayerController playerController;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //get a reference to the animation state machine
-        //animator = 
-        /*
-        if(animTriggers.Dash_A)
-            animator.SetTrigger("Dash_A");
-        if (animTriggers.Punch_A)
-            animator.SetTrigger("Punch_A");
-        if (animTriggers.Kick_A)
-            animator.SetTrigger("Kick_A");
-        if (animTriggers.HitReact_A)
-            animator.SetTrigger("HitReact_A");
-        if (animTriggers.HitReact_B)
-            animator.SetTrigger("HitReact_B");
-        if (animTriggers.HitReact_GuardBlock)
-            animator.SetTrigger("HitReact_GuardBlock");
+        playerController = animator.gameObject.GetComponentInParent(typeof(PlayerController)) as PlayerController;
+        animStateMachine = playerController.getStateMachine(true);
         
-        //get locomotion info from higher up
-       
-        if (isInLocomotion) {
-            animator.setFloat("Movement_Forward", movementForward);
-            animator.setFloat("Movement_Right", movementRight);
+        if(animTriggers.Dash_A)
+            animStateMachine.SetTrigger("Dash_A");
+        if (animTriggers.Punch_A)
+            animStateMachine.SetTrigger("Punch_A");
+        if (animTriggers.Kick_A)
+            animStateMachine.SetTrigger("Kick_A");
+        if (animTriggers.HitReact_A)
+            animStateMachine.SetTrigger("HitReact_A");
+        if (animTriggers.HitReact_B)
+            animStateMachine.SetTrigger("HitReact_B");
+        if (animTriggers.HitReact_GuardBlock)
+            animStateMachine.SetTrigger("HitReact_GuardBlock");
+
+        if (locomotionIsAllowed)
+        {
+            updateLocomotion();
         }
-        */
+        else {
+            animStateMachine.SetFloat("Movement_Forward", 0f);
+            animStateMachine.SetFloat("Movement_Right", 0f);
+        }
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if (locomotionIsAllowed)
+        {
+            updateLocomotion();
+        }
+    }
+
+    private void updateLocomotion() {
+        animStateMachine.SetFloat("Movement_Forward", playerController.getMovementForward());
+        animStateMachine.SetFloat("Movement_Right", playerController.getMovementRight());
+
+    }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     private Conductor conductor;
     private Vector3 movementVector3;
     private CameraFollow cameraScript;
+    private Animator animStateMachine;
+    private Animator gameplayStateMachine;
+
 
     private float playerSpeed = 1.8f;
     private float dashDistance = 0.8f;
@@ -26,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private float health = 100f;
 
     //time, in seconds, that you can be off from a note and have it still count
-    private float timingForgiveness = 0.11f;
+    private float timingForgiveness = 0.15f;
     
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,11 @@ public class PlayerController : MonoBehaviour
         input = gameObject.GetComponent(typeof(PlayerInput)) as PlayerInput;
         conductor = GameObject.Find("Conductor").GetComponent(typeof(Conductor)) as Conductor;
         cameraScript = GameObject.Find("Main Camera").GetComponent(typeof(CameraFollow)) as CameraFollow;
+        gameplayStateMachine = gameObject.GetComponent(typeof(Animator)) as Animator;
+        //Assumes our mesh is our first or only child.
+        animStateMachine = transform.GetChild(0).GetComponent(typeof(Animator)) as Animator;
+
+
 
         healthBar.maxValue = health;
         healthBar.value = health;
@@ -70,6 +78,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnKick()
     {
+        gameplayStateMachine.SetTrigger("KickInput");
+
         Debug.Log("Kick!");
 
         /*
@@ -93,6 +103,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnSnare()
     {
+        gameplayStateMachine.SetTrigger("SnareInput");
 
         /*
         if (health <= 0)
@@ -126,6 +137,27 @@ public class PlayerController : MonoBehaviour
 
     public float getHealth() {
         return health;
+    }
+
+    //Returns gameplay state machine if false, animation state machine if true
+    public Animator getStateMachine(bool b) {
+        if (b)
+        {
+            return animStateMachine;
+        }
+        else {
+            return gameplayStateMachine;
+        }
+    }
+
+    //spits out movement axes relative to player rotation, as opposed to world
+    public float getMovementForward() {
+        return Vector3.Dot(transform.forward, movementVector3);
+    }
+
+    public float getMovementRight()
+    {
+        return Vector3.Dot(transform.right, movementVector3);
     }
 
 }
