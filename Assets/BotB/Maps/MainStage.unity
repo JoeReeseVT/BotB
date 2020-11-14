@@ -1391,7 +1391,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   song: {fileID: 11400000, guid: 58707d2258368784b837c9eebb9a360a, type: 2}
-  song2: {fileID: 11400000, guid: 359bb4dc2d48af04d8776bd1db41b769, type: 2}
 --- !u!4 &1134038287
 Transform:
   m_ObjectHideFlags: 0
@@ -2438,6 +2437,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226125817051162188, guid: 5272c29c02b716d81853169334f694c5,
+        type: 3}
+      propertyPath: hurtboxes.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226125817051162188, guid: 5272c29c02b716d81853169334f694c5,
+        type: 3}
+      propertyPath: hitboxes.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7226125817051162188, guid: 5272c29c02b716d81853169334f694c5,
         type: 3}

@@ -1743,7 +1743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4348174307840099257}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09572087, y: -0.000000032470698, z: -0.0000000049985047}
+  m_LocalPosition: {x: -0.09572087, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6517270440399187453}
@@ -2393,6 +2393,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherPlayer: {fileID: 0}
   healthBar: {fileID: 0}
+  hurtboxes:
+  - {fileID: 3775909754855302714}
+  - {fileID: 6217653810567503296}
+  - {fileID: 7767984923087652040}
+  - {fileID: 6147687640144818701}
+  - {fileID: 715731472369857102}
+  - {fileID: 3417455312002677426}
+  - {fileID: 5067533501056452008}
+  - {fileID: 8865138674166249680}
+  - {fileID: 7500237929022174362}
+  - {fileID: 17259859313140999}
+  - {fileID: 7042052557266971446}
+  - {fileID: 3813203547376668433}
+  - {fileID: 884585689633406379}
+  hitboxes:
+  - {fileID: 4150706847301917740}
+  - {fileID: 7499428042973863680}
+  - {fileID: 7500237929022174362}
+  - {fileID: 2521805708011307075}
+  - {fileID: 9181461861728457691}
 --- !u!1 &7254976442826736944
 GameObject:
   m_ObjectHideFlags: 0
