@@ -10,9 +10,6 @@ public class PlayerController : MonoBehaviour
     public GameObject otherPlayer;
     public Slider healthBar;
 
-    public Collider[] hurtboxes;
-    public Collider[] hitboxes;
-
     private CharacterController controller;
     private PlayerInput input;
     private Conductor conductor;
