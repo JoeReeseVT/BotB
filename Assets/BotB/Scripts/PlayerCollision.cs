@@ -29,6 +29,7 @@ public class PlayerCollision : MonoBehaviour
         }
         foreach (Collider c in hitboxesArr) {
             hitboxes.Add(c.name, c);
+            c.enabled = false;  // Start the hitboxes as disabled
         }
     }
 
