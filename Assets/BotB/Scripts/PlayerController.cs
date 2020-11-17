@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private CameraFollow cameraScript;
     private Animator animStateMachine;
     private Animator gameplayStateMachine;
-
+    private bool canMove;
 
     private float playerSpeed = 1.8f;
     private float turnSpeed = 6.0f;
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         gameplayStateMachine = gameObject.GetComponent(typeof(Animator)) as Animator;
         //Assumes our mesh is our first or only child.
         animStateMachine = transform.GetChild(0).GetComponent(typeof(Animator)) as Animator;
-
+        canMove = true;
 
 
         healthBar.maxValue = health;
@@ -56,12 +56,15 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, 
-                             Quaternion.LookRotation(otherPlayer.transform.position - transform.position, Vector3.up), 
-                             Time.deltaTime*turnSpeed);
+        if (canMove)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                                 Quaternion.LookRotation(otherPlayer.transform.position - transform.position, Vector3.up),
+                                 Time.deltaTime * turnSpeed);
 
-        //transform.LookAt(otherPlayer.transform, Vector3.up);
-        controller.Move(movementVector3 * Time.deltaTime * playerSpeed);
+            //transform.LookAt(otherPlayer.transform, Vector3.up);
+            controller.Move(movementVector3 * Time.deltaTime * playerSpeed);
+        }
     }
 
     public void OnMove(InputValue value)
@@ -166,4 +169,9 @@ public class PlayerController : MonoBehaviour
     public void dashTeleport(float dashDistance) {
         controller.Move(Vector3.Normalize(movementVector3) * dashDistance);
     }
+
+    public void setCanMove(bool newCanMove) {
+        canMove = newCanMove;
+    }
+
 }

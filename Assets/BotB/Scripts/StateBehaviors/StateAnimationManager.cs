@@ -57,8 +57,9 @@ public class StateAnimationManager : StateMachineBehaviour
         if (animTriggers.HitReact_GuardBlock)
             animStateMachine.SetTrigger("HitReact_GuardBlock");
 
+        playerController.setCanMove(locomotionIsAllowed);
         if (locomotionIsAllowed)
-        {
+        {   
             updateLocomotion();
         }
         else {
