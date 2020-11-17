@@ -79,36 +79,24 @@ public class PlayerController : MonoBehaviour
     {
         gameplayStateMachine.SetTrigger("KickInput");
 
-        Debug.Log("Kick!");
-
-        /*
-        //placeholder for dash. don't let this ship!
-
-        if (health <= 0)
-        {
-            return;
-        }
-
         if (Mathf.Abs(conductor.nearestNoteDist((int)Notes.DrumKick)) <= timingForgiveness)
         {
-            controller.Move(Vector3.Normalize(movementVector3) * dashDistance);
+            gameplayStateMachine.SetTrigger("KickInputValid");
         }
-        else {
-            Debug.Log("Player tried to dash but was " + conductor.nearestNoteDist((int)Notes.DrumKick) + " seconds off.");
-        }
-        */
 
+        Debug.Log("Kick!");
     }
 
     public void OnSnare()
     {
         gameplayStateMachine.SetTrigger("SnareInput");
 
-        /*
-        if (health <= 0)
+        if (Mathf.Abs(conductor.nearestNoteDist((int)Notes.DrumSnare)) <= timingForgiveness)
         {
-            return;
+            gameplayStateMachine.SetTrigger("SnareInputValid");
         }
+
+        /*
         //placeholder for attack. don't let this ship!
         if ( Mathf.Abs(conductor.nearestNoteDist((int)Notes.DrumSnare)) <= timingForgiveness && Vector3.Magnitude(transform.position - otherPlayer.transform.position) < 2) {
             otherPlayer.GetComponent<PlayerController>().takeDamage(4.0f);
@@ -122,6 +110,10 @@ public class PlayerController : MonoBehaviour
     public void OnCrash()
     {
         gameplayStateMachine.SetTrigger("CymbalInput");
+        if (Mathf.Abs(conductor.nearestNoteDist((int)Notes.DrumCrash)) <= timingForgiveness)
+        {
+            gameplayStateMachine.SetTrigger("CymbalInputValid");
+        }
 
         Debug.Log("Crash!");
     }
@@ -129,6 +121,10 @@ public class PlayerController : MonoBehaviour
     public void OnHat()
     {
         gameplayStateMachine.SetTrigger("HatInput");
+        if (Mathf.Abs(conductor.nearestNoteDist((int)Notes.DrumHat)) <= timingForgiveness)
+        {
+            gameplayStateMachine.SetTrigger("HatInputValid");
+        }
 
         Debug.Log("Hat!");
     }
