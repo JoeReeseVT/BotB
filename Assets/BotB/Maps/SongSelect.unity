@@ -585,7 +585,7 @@ PrefabInstance:
     - target: {fileID: 6092984924575975400, guid: 5a739b8b5f954a8468a5934d9c5a1e10,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6092984924575975403, guid: 5a739b8b5f954a8468a5934d9c5a1e10,
         type: 3}
@@ -661,6 +661,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1555379737}
     m_Modifications:
+    - target: {fileID: 6214657440853577366, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
+        type: 3}
+      propertyPath: m_text
+      value: Test song (don't pick this one)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214657440861451774, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214657440861451775, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6214657441785113794, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -724,7 +739,17 @@ PrefabInstance:
     - target: {fileID: 6214657441785113805, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214657442511264112, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
+        type: 3}
+      propertyPath: m_text
+      value: Test song (don't pick this one)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214657442576098094, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
+        type: 3}
+      propertyPath: m_text
+      value: Click this one!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7ec757beb8b6a4e8858e119e7f05e7, type: 3}

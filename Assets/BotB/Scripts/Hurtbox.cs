@@ -45,7 +45,7 @@ public class Hurtbox : MonoBehaviour
         Debug.Log("Collision detected by Hurtbox");
 
         // Apply damage in response to being hit
-        gameObject.GetComponentInParent<PlayerController>().takeDamage(10);
+        gameObject.GetComponentInParent<PlayerController>().takeDamage(5);
         
 
         // Disable the hurtboxes and don't re-enable them until timer has elapsed in Update()
