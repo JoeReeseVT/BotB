@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
 
 
     private float playerSpeed = 1.8f;
-    private float dashDistance = 0.8f;
     private float turnSpeed = 6.0f;
 
     private float health = 100f;
@@ -119,17 +118,23 @@ public class PlayerController : MonoBehaviour
 
     public void OnCrash()
     {
+        gameplayStateMachine.SetTrigger("CymbalInput");
+
         Debug.Log("Crash!");
     }
 
     public void OnHat()
     {
+        gameplayStateMachine.SetTrigger("HatInput");
+
         Debug.Log("Hat!");
     }
 
     public void takeDamage(float damage) {
         health = health - damage;
         healthBar.value = health;
+        //if we have enough damage to interrupt
+        gameplayStateMachine.Play("BaseLayer.HitReact_A");
     }
 
     public float getHealth() {
@@ -156,5 +161,9 @@ public class PlayerController : MonoBehaviour
     {
         return Vector3.Dot(transform.right, movementVector3);
     }
-
+    
+    //gets called by the gameplay state machine. does the actual locomotion for the dash + any effects calls we need
+    public void dashTeleport(float dashDistance) {
+        controller.Move(Vector3.Normalize(movementVector3) * dashDistance);
+    }
 }

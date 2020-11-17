@@ -13,10 +13,14 @@ public class StateAnimationManager : StateMachineBehaviour
     public struct BotBAnimationStateTriggers {
         public bool Dash_A;
         public bool Punch_A;
+        public bool Punch_B;
+        public bool Punch_C;
+        public bool Punch_D;
         public bool Kick_A;
         public bool HitReact_A;
         public bool HitReact_B;
         public bool HitReact_GuardBlock;
+
     }
 
     private Animator animStateMachine;
@@ -35,12 +39,21 @@ public class StateAnimationManager : StateMachineBehaviour
             animStateMachine.SetTrigger("Dash_A");
         if (animTriggers.Punch_A)
             animStateMachine.SetTrigger("Punch_A");
+        if (animTriggers.Punch_B)
+            animStateMachine.SetTrigger("Punch_B");
+        if (animTriggers.Punch_C)
+            animStateMachine.SetTrigger("Punch_C");
+        if (animTriggers.Punch_D)
+            animStateMachine.SetTrigger("Punch_D");
+
         if (animTriggers.Kick_A)
             animStateMachine.SetTrigger("Kick_A");
         if (animTriggers.HitReact_A)
             animStateMachine.SetTrigger("HitReact_A");
         if (animTriggers.HitReact_B)
             animStateMachine.SetTrigger("HitReact_B");
+        if (animTriggers.HitReact_GuardBlock)
+            animStateMachine.SetTrigger("HitReact_GuardBlock");
         if (animTriggers.HitReact_GuardBlock)
             animStateMachine.SetTrigger("HitReact_GuardBlock");
 
