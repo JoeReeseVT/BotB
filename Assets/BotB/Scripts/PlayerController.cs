@@ -137,7 +137,13 @@ public class PlayerController : MonoBehaviour
         health = health - damage;
         healthBar.value = health;
         //if we have enough damage to interrupt
-        gameplayStateMachine.Play("BaseLayer.HitReact_A");
+        if (damage <= 10)
+        {
+            animStateMachine.SetTrigger("HitReact_B");
+        }
+        else {
+            gameplayStateMachine.Play("BaseLayer.HitReact_A");
+        }
     }
 
     public float getHealth() {

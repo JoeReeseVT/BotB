@@ -70,7 +70,7 @@ MonoBehaviour:
     HitReact_A: 0
     HitReact_B: 0
     HitReact_GuardBlock: 0
-  locomotionIsAllowed: 1
+  locomotionIsAllowed: 0
 --- !u!114 &-7305181145742853371
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +167,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7057352843282751004}
+  - {fileID: -831020963645248198}
   m_StateMachineBehaviours:
   - {fileID: 9156684741442921315}
   - {fileID: 407987293280882238}
@@ -398,6 +399,31 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0
   m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-831020963645248198
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: KickInput
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -5878716765143091772}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1038,7 +1064,7 @@ AnimatorStateMachine:
     m_Position: {x: 660, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5878716765143091772}
-    m_Position: {x: 930, y: -140, z: 0}
+    m_Position: {x: 970, y: -210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3191674176816163265}
     m_Position: {x: 1180, y: -80, z: 0}
@@ -1053,10 +1079,10 @@ AnimatorStateMachine:
     m_Position: {x: 1100, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5389609458101022134}
-    m_Position: {x: 1320, y: 190, z: 0}
+    m_Position: {x: 1310, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4131311988868286455}
-    m_Position: {x: 1320, y: 80, z: 0}
+    m_Position: {x: 1310, y: -20, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 6907574348564809394}
