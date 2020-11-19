@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject otherPlayer;
     public Slider healthBar;
+    public GameObject WinText;
+    public int playerlose;
 
     private CharacterController controller;
     private PlayerInput input;
@@ -43,6 +45,8 @@ public class PlayerController : MonoBehaviour
         healthBar.maxValue = health;
         healthBar.value = health;
 
+        WinText.SetActive(false);
+
     }
     public void OnEnable()
     {
@@ -53,6 +57,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (health <= 0) {
+            WinText.GetComponent<Text>().text = "Player " + playerlose.ToString() + "wins!";
+            WinText.SetActive(true);
             return;
         }
 
