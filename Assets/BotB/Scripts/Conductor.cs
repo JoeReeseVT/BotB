@@ -9,7 +9,7 @@ public class Conductor : MonoBehaviour
 {
     bool isPaused;
 
-    float currentBeatsPerMinute;
+    public float currentBeatsPerMinute;
     double currentSecondsPerBeat;
 
     // What our actual position is in the audio track
