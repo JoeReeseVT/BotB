@@ -664,7 +664,7 @@ PrefabInstance:
     - target: {fileID: 6214657440853577366, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
         type: 3}
       propertyPath: m_text
-      value: Test song (don't pick this one)
+      value: Track B (Deep house, 120 BPM)
       objectReference: {fileID: 0}
     - target: {fileID: 6214657440861451774, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
         type: 3}
@@ -741,6 +741,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6214657442140527247, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f7885a7bacf3e749a4e4d4bf6c784e5,
+        type: 2}
     - target: {fileID: 6214657442511264112, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
         type: 3}
       propertyPath: m_text
@@ -749,7 +755,7 @@ PrefabInstance:
     - target: {fileID: 6214657442576098094, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
         type: 3}
       propertyPath: m_text
-      value: Click this one!
+      value: Track A (Metal, 90 BPM)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7ec757beb8b6a4e8858e119e7f05e7, type: 3}
