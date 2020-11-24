@@ -473,10 +473,10 @@ MonoBehaviour:
   kdash: {fileID: 1625086266}
   kl_punch: {fileID: 721277349}
   kh_punch: {fileID: 630564029}
-  ckick: {fileID: 0}
-  cdash: {fileID: 0}
-  cl_punch: {fileID: 0}
-  ch_punch: {fileID: 0}
+  ckick: {fileID: 76234263}
+  cdash: {fileID: 1827918525}
+  cl_punch: {fileID: 548712093}
+  ch_punch: {fileID: 1760187475}
 --- !u!1 &76234261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1552,7 @@ GameObject:
   - component: {fileID: 715506604}
   - component: {fileID: 715506603}
   m_Layer: 0
-  m_Name: DashButton(1)
+  m_Name: cdash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1620,7 +1620,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 715506604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 48486458}
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 715506601}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &715506604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,7 +1905,7 @@ GameObject:
   - component: {fileID: 1053091041}
   - component: {fileID: 1053091040}
   m_Layer: 0
-  m_Name: LPunchButton(1)
+  m_Name: cl_punch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1962,7 +1973,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1053091041}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 48486458}
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1053091038}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1053091041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,7 +2168,7 @@ GameObject:
   - component: {fileID: 1153709123}
   - component: {fileID: 1153709122}
   m_Layer: 0
-  m_Name: HPunchButton(1)
+  m_Name: ch_punch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2214,7 +2236,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1153709123}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 48486458}
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1153709120}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1153709123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3499,7 +3532,7 @@ GameObject:
   - component: {fileID: 2066462128}
   - component: {fileID: 2066462127}
   m_Layer: 0
-  m_Name: KickButton (1)
+  m_Name: ckick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3567,7 +3600,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2066462128}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 48486458}
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2066462125}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2066462128
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,18 +26,28 @@ public class KeyBindManager : MonoBehaviour
 
         //Pretty sure I can't use a keyCode here,
         //currently looking for a solution
-        /*
-        keys.Add("ckick", KeyCode.L);
-        keys.Add("cdash", KeyCode.K);
-        keys.Add("cl_punch", KeyCode.I);
-        keys.Add("ch_punch", KeyCode.J);
-        */
+        
+        
+        keys.Add("ckick", KeyCode.JoystickButton0);
+        keys.Add("cdash", KeyCode.JoystickButton1);
+        keys.Add("cl_punch", KeyCode.JoystickButton2);
+        keys.Add("ch_punch", KeyCode.JoystickButton3);
+        
+        
 
         //Setting the default text for the button
         kkick.text = keys["kkick"].ToString();
         kdash.text = keys["kdash"].ToString();
         kl_punch.text = keys["kl_punch"].ToString();
         kh_punch.text = keys["kh_punch"].ToString();
+
+        
+        ckick.text = keys["ckick"].ToString();
+        cdash.text = keys["cdash"].ToString();
+        cl_punch.text = keys["cl_punch"].ToString();
+        ch_punch.text = keys["ch_punch"].ToString();
+        
+        
     }
 
     void Update()
@@ -57,6 +67,18 @@ public class KeyBindManager : MonoBehaviour
                 keys[currentKey.name] = e.keyCode;
                 currentKey.transform.GetChild(0).GetComponent<Text>().text = e.keyCode.ToString();
                 currentKey = null;
+            }
+            else
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    if (Input.GetKeyDown("JoystickButton" + i.ToString()))
+                    {
+                        keys[currentKey.name] = e.keyCode;
+                        currentKey.transform.GetChild(0).GetComponent<Text>().text = e.keyCode.ToString();
+                        currentKey = null;
+                    }
+                }
             }
         }
     }
