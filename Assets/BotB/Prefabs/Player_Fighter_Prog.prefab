@@ -814,6 +814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7143804739834165521}
   - component: {fileID: 4150706847301917740}
+  - component: {fileID: 4187150826043377664}
   m_Layer: 8
   m_Name: Fighter_LeftHand_Hitbox
   m_TagString: Untagged
@@ -848,6 +849,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.13
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4187150826043377664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959794606206475158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c1ab1b970cca5439d43fd316ce3b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitDelay: 0
 --- !u!1 &2010856170910026426
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5257342072304707276}
   - component: {fileID: 7500237929022174362}
+  - component: {fileID: 7059047799459603391}
   m_Layer: 8
   m_Name: Fighter_RightHand_Hitbox
   m_TagString: Untagged
@@ -951,6 +966,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.13
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7059047799459603391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075556041745707008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c1ab1b970cca5439d43fd316ce3b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitDelay: 0
 --- !u!1 &2282618054904944320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3740678359883142954}
   - component: {fileID: 9181461861728457691}
+  - component: {fileID: 7883632887585165144}
   m_Layer: 8
   m_Name: Fighter_LeftFoot_Hitbox
   m_TagString: Untagged
@@ -1089,6 +1118,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.18
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7883632887585165144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2471585645828107810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c1ab1b970cca5439d43fd316ce3b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitDelay: 0
 --- !u!1 &2563629432277476890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,6 +2436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherPlayer: {fileID: 0}
   healthBar: {fileID: 0}
+  WinText: {fileID: 0}
+  playerlose: 0
 --- !u!114 &1598972672849720455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2731,6 +2775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7084689028568093774}
   - component: {fileID: 7499428042973863680}
+  - component: {fileID: 7863395173559405168}
   m_Layer: 8
   m_Name: Fighter_Head_Hitbox
   m_TagString: Untagged
@@ -2765,6 +2810,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.14
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7863395173559405168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7954409708932648124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c1ab1b970cca5439d43fd316ce3b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitDelay: 0
 --- !u!1 &8121311566181860035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,6 +3049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507281708107511076}
   - component: {fileID: 2521805708011307075}
+  - component: {fileID: 5021393932576549234}
   m_Layer: 8
   m_Name: Fighter_RightFoot_Hitbox
   m_TagString: Untagged
@@ -3025,6 +3084,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.18
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5021393932576549234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8617957542287418064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c1ab1b970cca5439d43fd316ce3b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitDelay: 0
 --- !u!1 &8943538757866138543
 GameObject:
   m_ObjectHideFlags: 0

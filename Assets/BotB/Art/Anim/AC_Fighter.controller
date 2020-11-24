@@ -255,6 +255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987b058565307a2a6951c6a38edf88a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitboxToActivate: Fighter_RightHand_Hitbox
+  damage: 6
+  screenShake: 0.25
 --- !u!114 &-5002415653235071142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,6 +345,21 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-3575263663693886154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987b058565307a2a6951c6a38edf88a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitboxToActivate: Fighter_LeftFoot_Hitbox
+  damage: 12
+  screenShake: 0.8
 --- !u!114 &-3475101597904883018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -379,6 +397,21 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-3323609277214093783
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987b058565307a2a6951c6a38edf88a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitboxToActivate: Fighter_LeftHand_Hitbox
+  damage: 2
+  screenShake: 0.1
 --- !u!1102 &-2572364541108414658
 AnimatorState:
   serializedVersion: 5
@@ -441,6 +474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987b058565307a2a6951c6a38edf88a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitboxToActivate: Fighter_RightHand_Hitbox
+  damage: 2
+  screenShake: 0.1
 --- !u!1107 &-1813925270118491304
 AnimatorStateMachine:
   serializedVersion: 5
@@ -873,8 +909,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: -9157493657234526834}
   m_StateMachineBehaviours:
-  - {fileID: -5002415653235071142}
-  - {fileID: -1358611349962354260}
+  - {fileID: -3575263663693886154}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1222,7 +1257,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 8757814782031565915}
   m_StateMachineBehaviours:
-  - {fileID: 3919027649620863776}
+  - {fileID: -3323609277214093783}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

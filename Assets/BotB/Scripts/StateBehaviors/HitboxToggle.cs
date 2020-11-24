@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitboxToggle_LeftFoot : StateMachineBehaviour
+public class HitboxToggle : StateMachineBehaviour
 {
+    //bit of a shit solution but it'll do
+    public string hitboxToActivate;
+
+    public float damage;
+    public float screenShake;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponentInParent<PlayerCollision>().hitboxes["Fighter_LeftFoot_Hitbox"].enabled = true;    
+        animator.GetComponentInParent<PlayerCollision>().hitboxes[hitboxToActivate].enabled = true;
+        animator.GetComponentInParent<PlayerCollision>().hitboxes[hitboxToActivate].GetComponent<Hitbox>().ActivateHitbox(damage, screenShake);
 
     }
 
@@ -20,7 +26,8 @@ public class HitboxToggle_LeftFoot : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponentInParent<PlayerCollision>().hitboxes["Fighter_LeftFoot_Hitbox"].enabled = false;
+        animator.GetComponentInParent<PlayerCollision>().hitboxes[hitboxToActivate].GetComponent<Hitbox>().DeactivateHitbox();
+        animator.GetComponentInParent<PlayerCollision>().hitboxes[hitboxToActivate].enabled = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
