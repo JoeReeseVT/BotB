@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Slider healthBar;
     public GameObject WinText;
     public int playerlose;
+    public GameObject thisPlayer;
 
     private CharacterController controller;
     private PlayerInput input;
@@ -187,6 +188,11 @@ public class PlayerController : MonoBehaviour
 
     public void setCanMove(bool newCanMove) {
         canMove = newCanMove;
+    }
+
+    public void setCharacter()
+    {
+
     }
 
 }

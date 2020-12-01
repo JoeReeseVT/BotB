@@ -16,8 +16,8 @@ public class SelectionScript : MonoBehaviour
     public GameObject P2Menu;
     public GameObject SongMenu;
 
-    public static CharacterMetadata Player1Choice;
-    public static CharacterMetadata Player2Choice;
+    public static GameObject Player1Choice;
+    public static GameObject Player2Choice;
 
 
     void Awake()
@@ -57,14 +57,14 @@ public class SelectionScript : MonoBehaviour
     */
   
 
-    public void OnP2(CharacterMetadata Player_1)
+    public void OnP2(GameObject Player_1)
     {
         UnityEngine.Debug.Log("P1 button pressed");
         Player1Choice = Player_1;
         currentState = MenuStates.Player2;
     }
 
-    public void OnSong(CharacterMetadata Player_2)
+    public void OnSong(GameObject Player_2)
     {
         UnityEngine.Debug.Log("P2 button pressed");
         Player2Choice = Player_2;
