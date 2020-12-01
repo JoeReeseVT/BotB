@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
         animStateMachine = transform.GetChild(0).GetComponent(typeof(Animator)) as Animator;
         canMove = true;
 
+        input.ActivateInput();
 
         healthBar.maxValue = health;
         healthBar.value = health;
@@ -139,12 +140,18 @@ public class PlayerController : MonoBehaviour
         health = health - damage;
         healthBar.value = health;
         //if we have enough damage to interrupt
-        if (damage <= 10)
-        {
-            animStateMachine.SetTrigger("HitReact_B");
-        }
-        else {
-            gameplayStateMachine.Play("BaseLayer.HitReact_A");
+
+        if (health <= 0) {
+            gameplayStateMachine.Play("BaseLayer.KO");
+
+            if (damage <= 10)
+            {
+                animStateMachine.SetTrigger("HitReact_B");
+            }
+            else
+            {
+                gameplayStateMachine.Play("BaseLayer.HitReact_A");
+            }
         }
     }
 

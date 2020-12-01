@@ -17,4 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BotB/Maps/SongSelect.unity
     guid: 75ff98d2f424677499b5ded36ff8dfac
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 215b5c3587b07cb48a40f02d33262400,
+      type: 2}

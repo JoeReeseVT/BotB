@@ -20,6 +20,7 @@ public class StateAnimationManager : StateMachineBehaviour
         public bool HitReact_A;
         public bool HitReact_B;
         public bool HitReact_GuardBlock;
+        public bool KO;
 
     }
 
@@ -45,7 +46,6 @@ public class StateAnimationManager : StateMachineBehaviour
             animStateMachine.SetTrigger("Punch_C");
         if (animTriggers.Punch_D)
             animStateMachine.SetTrigger("Punch_D");
-
         if (animTriggers.Kick_A)
             animStateMachine.SetTrigger("Kick_A");
         if (animTriggers.HitReact_A)
@@ -56,6 +56,8 @@ public class StateAnimationManager : StateMachineBehaviour
             animStateMachine.SetTrigger("HitReact_GuardBlock");
         if (animTriggers.HitReact_GuardBlock)
             animStateMachine.SetTrigger("HitReact_GuardBlock");
+        if (animTriggers.KO)
+            animStateMachine.SetTrigger("KO");
 
         playerController.setCanMove(locomotionIsAllowed);
         if (locomotionIsAllowed)
