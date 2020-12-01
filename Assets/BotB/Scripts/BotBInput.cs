@@ -57,6 +57,14 @@ public class @BotBInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""d663d683-3030-4254-b23f-ac085be0b8c7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -213,6 +221,28 @@ public class @BotBInput : IInputActionCollection, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c2cca179-119f-4097-8337-1859a2aebbf4"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player1;Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d457a5a3-8103-441c-b38b-8d74e2c92407"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player2;Controller"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -556,6 +586,7 @@ public class @BotBInput : IInputActionCollection, IDisposable
         m_Player_Snare = m_Player.FindAction("Snare", throwIfNotFound: true);
         m_Player_Crash = m_Player.FindAction("Crash", throwIfNotFound: true);
         m_Player_Hat = m_Player.FindAction("Hat", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -622,6 +653,7 @@ public class @BotBInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Snare;
     private readonly InputAction m_Player_Crash;
     private readonly InputAction m_Player_Hat;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @BotBInput m_Wrapper;
@@ -631,6 +663,7 @@ public class @BotBInput : IInputActionCollection, IDisposable
         public InputAction @Snare => m_Wrapper.m_Player_Snare;
         public InputAction @Crash => m_Wrapper.m_Player_Crash;
         public InputAction @Hat => m_Wrapper.m_Player_Hat;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -655,6 +688,9 @@ public class @BotBInput : IInputActionCollection, IDisposable
                 @Hat.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHat;
                 @Hat.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHat;
                 @Hat.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHat;
+                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -674,6 +710,9 @@ public class @BotBInput : IInputActionCollection, IDisposable
                 @Hat.started += instance.OnHat;
                 @Hat.performed += instance.OnHat;
                 @Hat.canceled += instance.OnHat;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -826,6 +865,7 @@ public class @BotBInput : IInputActionCollection, IDisposable
         void OnSnare(InputAction.CallbackContext context);
         void OnCrash(InputAction.CallbackContext context);
         void OnHat(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

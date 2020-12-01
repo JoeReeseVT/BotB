@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Security.Policy;
 using UnityEngine;
 using static Notes;
+using UnityEngine.Audio;
 
 public class Conductor : MonoBehaviour
 {
     bool isPaused;
 
+    public AudioMixerGroup mixer;
     public float currentBeatsPerMinute;
     double currentSecondsPerBeat;
 
@@ -42,6 +44,7 @@ public class Conductor : MonoBehaviour
     {
         isPaused = true;
         musicSource = gameObject.AddComponent<AudioSource>();
+        musicSource.outputAudioMixerGroup = mixer;
         song = ChooseSong.choosesong;
         loadSong(song);
     }

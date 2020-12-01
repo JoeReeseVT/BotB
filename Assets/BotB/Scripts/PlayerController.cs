@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private PlayerInput input;
     private Conductor conductor;
     private Vector3 movementVector3;
+    public PauseMenu pauseMenu;
     private CameraFollow cameraScript;
     private Animator animStateMachine;
     private Animator gameplayStateMachine;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
         input = gameObject.GetComponent(typeof(PlayerInput)) as PlayerInput;
         conductor = GameObject.Find("Conductor").GetComponent(typeof(Conductor)) as Conductor;
         cameraScript = GameObject.Find("Main Camera").GetComponent(typeof(CameraFollow)) as CameraFollow;
+
         gameplayStateMachine = gameObject.GetComponent(typeof(Animator)) as Animator;
         //Assumes our mesh is our first or only child.
         animStateMachine = transform.GetChild(0).GetComponent(typeof(Animator)) as Animator;
@@ -136,6 +138,13 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Hat!");
     }
+
+    public void OnPause()
+    {
+
+        pauseMenu.TogglePauseMenu();
+    }
+
 
     public void takeDamage(float damage) {
         health = health - damage;
