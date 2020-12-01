@@ -2825,6 +2825,11 @@ PrefabInstance:
       propertyPath: playerlose
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7226125817051162188, guid: 95386e7dc611d834ab116cbda5d34acc,
+        type: 3}
+      propertyPath: thisPlayer
+      value: 
+      objectReference: {fileID: 741839654}
     - target: {fileID: 7957104916065400170, guid: 95386e7dc611d834ab116cbda5d34acc,
         type: 3}
       propertyPath: m_ApplyRootMotion
@@ -4870,6 +4875,11 @@ PrefabInstance:
       propertyPath: playerlose
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7226125817051162188, guid: 5272c29c02b716d81853169334f694c5,
+        type: 3}
+      propertyPath: thisPlayer
+      value: 
+      objectReference: {fileID: 1001495504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5272c29c02b716d81853169334f694c5, type: 3}
 --- !u!1001 &1870911185
