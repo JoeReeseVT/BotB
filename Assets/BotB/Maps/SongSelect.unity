@@ -709,6 +709,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6214657440933268086, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 13baf53655840dd428a1424f084df5d4,
+        type: 2}
     - target: {fileID: 6214657441785113794, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -783,7 +789,7 @@ PrefabInstance:
     - target: {fileID: 6214657442511264112, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
         type: 3}
       propertyPath: m_text
-      value: Test song (don't pick this one)
+      value: Start Here (Tutorialcore, 115 BPM)
       objectReference: {fileID: 0}
     - target: {fileID: 6214657442576098094, guid: 9e7ec757beb8b6a4e8858e119e7f05e7,
         type: 3}
