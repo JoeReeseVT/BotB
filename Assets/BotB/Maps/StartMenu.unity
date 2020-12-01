@@ -3189,8 +3189,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 819140900}
   - {fileID: 1554476945}
+  - {fileID: 819140900}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3804,7 +3804,7 @@ PrefabInstance:
     - target: {fileID: 9128724096106046338, guid: b5766bc9de3e8ab4ab2196ceac658a0c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9128724096106046338, guid: b5766bc9de3e8ab4ab2196ceac658a0c,
         type: 3}
@@ -3921,6 +3921,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.975
       objectReference: {fileID: 0}
+    - target: {fileID: 9128724096205813551, guid: b5766bc9de3e8ab4ab2196ceac658a0c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4726
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128724096320525653, guid: b5766bc9de3e8ab4ab2196ceac658a0c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5835
+      objectReference: {fileID: 0}
     - target: {fileID: 9128724096654854659, guid: b5766bc9de3e8ab4ab2196ceac658a0c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3980,6 +3990,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.2341
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128724097869379911, guid: b5766bc9de3e8ab4ab2196ceac658a0c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4543
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5766bc9de3e8ab4ab2196ceac658a0c, type: 3}
