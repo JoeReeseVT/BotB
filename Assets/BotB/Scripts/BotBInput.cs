@@ -162,7 +162,7 @@ public class @BotBInput : IInputActionCollection, IDisposable
                 {
                     ""name"": ""2D Vector"",
                     ""id"": ""96080812-3b9b-40d7-9ecd-7f4462316218"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

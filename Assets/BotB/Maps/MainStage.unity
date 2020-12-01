@@ -4828,7 +4828,7 @@ PrefabInstance:
     - target: {fileID: 7226125817051162179, guid: 5272c29c02b716d81853169334f694c5,
         type: 3}
       propertyPath: m_DefaultActionMap
-      value: 
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7226125817051162182, guid: 5272c29c02b716d81853169334f694c5,
         type: 3}
