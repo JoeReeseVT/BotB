@@ -155,6 +155,9 @@ public class Conductor : MonoBehaviour
     {
         if (!isPaused) {
             updatePositions();
+            if (CurrentTime() > musicSource.clip.length) {
+                loadSong(song);
+            }
         }        
     }
 
