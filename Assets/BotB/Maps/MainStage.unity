@@ -439,6 +439,8 @@ Transform:
   - {fileID: 496467485}
   - {fileID: 820570257}
   - {fileID: 1514170668}
+  - {fileID: 572057353}
+  - {fileID: 304715643}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -716,6 +718,112 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 37515020}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &304715642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 304715643}
+  - component: {fileID: 304715645}
+  - component: {fileID: 304715644}
+  m_Layer: 0
+  m_Name: Dynamic Spot Front (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &304715643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304715642}
+  m_LocalRotation: {x: 0.16029397, y: -0.3505018, z: 0.9202553, w: -0.067709334}
+  m_LocalPosition: {x: -3.94, y: 5.39, z: 1.69}
+  m_LocalScale: {x: 3.2746525, y: 1.8794998, z: 1.8794998}
+  m_Children: []
+  m_Father: {fileID: 116820819}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 141.435, y: -154.023, z: 17.64299}
+--- !u!114 &304715644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304715642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 0
+--- !u!108 &304715645
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304715642}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 0.36320752, g: 0.6702987, b: 1, a: 1}
+  m_Intensity: 20
+  m_Range: 15
+  m_SpotAngle: 77.45461
+  m_InnerSpotAngle: 54.410072
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.6
+    m_NormalBias: 0.25
+    m_NearPlane: 2.5
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &347372334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1595,7 @@ GameObject:
   - component: {fileID: 572057352}
   - component: {fileID: 572057354}
   m_Layer: 0
-  m_Name: Spot Light (1)
+  m_Name: Dynamic Spot Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1562,11 +1670,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572057351}
   m_LocalRotation: {x: 0.9573199, y: -0.08879335, z: 0.24972455, w: 0.115291044}
-  m_LocalPosition: {x: -7, y: 7.47, z: 15.35}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.611737, y: 8.87015, z: 27.4445}
+  m_LocalScale: {x: 1.2499999, y: 1.2499999, z: 1.2499999}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 116820819}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 164.628, y: -28.335999, z: 6.695999}
 --- !u!114 &572057354
 MonoBehaviour:
