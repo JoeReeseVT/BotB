@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject WinText;
     public int playerlose;
     public GameObject thisPlayer;
+    public bool stopspawning;
 
     private CharacterController controller;
     private PlayerInput input;
@@ -33,6 +34,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!stopspawning)
+        {
+            setCharacter();
+        }
         controller = gameObject.GetComponent(typeof(CharacterController)) as CharacterController;
         input = gameObject.GetComponent(typeof(PlayerInput)) as PlayerInput;
         conductor = GameObject.Find("Conductor").GetComponent(typeof(Conductor)) as Conductor;
@@ -48,7 +53,6 @@ public class PlayerController : MonoBehaviour
         healthBar.value = health;
 
         WinText.SetActive(false);
-
     }
     public void OnEnable()
     {
@@ -190,9 +194,44 @@ public class PlayerController : MonoBehaviour
         canMove = newCanMove;
     }
 
+    
     public void setCharacter()
     {
-
+        stopspawning = true;
+        GameObject newObj;
+        GameObject animatorobj;
+        if (playerlose == 2)
+        {            
+            newObj = GameObject.Instantiate(SelectionScript.Player1Choice) as GameObject;
+            newObj.transform.SetParent(thisPlayer.transform);
+            animatorobj = GameObject.Instantiate(SelectionScript.Player1Choice.transform.GetChild(0).gameObject) as GameObject;
+            UnityEngine.Debug.Log("Creating Player 1");
+        }
+        else
+        {
+            newObj = GameObject.Instantiate(SelectionScript.Player2Choice) as GameObject;
+            newObj.transform.SetParent(thisPlayer.transform);
+            animatorobj = GameObject.Instantiate(SelectionScript.Player2Choice.transform.GetChild(0).gameObject) as GameObject;
+            UnityEngine.Debug.Log("Creating Player 2");
+        }
+        newObj.transform.GetComponent<PlayerController>().otherPlayer = thisPlayer.transform.GetComponent<PlayerController>().otherPlayer;
+        newObj.transform.GetComponent<PlayerController>().healthBar = thisPlayer.transform.GetComponent<PlayerController>().healthBar;
+        newObj.transform.GetComponent<PlayerController>().WinText = thisPlayer.transform.GetComponent<PlayerController>().WinText;
+        newObj.transform.GetComponent<PlayerController>().playerlose = thisPlayer.transform.GetComponent<PlayerController>().playerlose;
+        newObj.transform.GetComponent<PlayerController>().thisPlayer = thisPlayer.transform.GetComponent<PlayerController>().thisPlayer;
+        newObj.transform.GetComponent<PlayerController>().stopspawning = thisPlayer.transform.GetComponent<PlayerController>().stopspawning;
+        newObj.transform.GetComponent<PlayerInput>().actions = thisPlayer.transform.GetComponent<PlayerInput>().actions;
+        newObj.transform.GetComponent<PlayerInput>().camera = thisPlayer.transform.GetComponent<PlayerInput>().camera;
+        if (playerlose == 2)
+        {
+            newObj.transform.GetComponent<PlayerInput>().camera.GetComponent<CameraFollow>().characterA = newObj.transform;
+            newObj.transform.GetComponent<PlayerInput>().defaultControlScheme = thisPlayer.transform.GetComponent<PlayerInput>().defaultControlScheme;
+        }
+        else
+        {
+            newObj.transform.GetComponent<PlayerInput>().camera.GetComponent<CameraFollow>().characterB = newObj.transform;
+        }
     }
+    
 
 }
