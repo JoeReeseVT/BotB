@@ -2427,6 +2427,7 @@ MonoBehaviour:
   WinText: {fileID: 0}
   playerlose: 0
   thisPlayer: {fileID: 0}
+  stopspawning: 0
 --- !u!114 &1598972672849720455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2655,7 +2656,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: de37643c89a4a3c4992d6180f1348ce8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

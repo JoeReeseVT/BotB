@@ -197,11 +197,13 @@ public class PlayerController : MonoBehaviour
     
     public void setCharacter()
     {
+
+
         stopspawning = true;
         GameObject newObj;
         GameObject animatorobj;
         if (playerlose == 2)
-        {            
+        {   
             newObj = GameObject.Instantiate(SelectionScript.Player1Choice) as GameObject;
             newObj.transform.SetParent(thisPlayer.transform);
             animatorobj = GameObject.Instantiate(SelectionScript.Player1Choice.transform.GetChild(0).gameObject) as GameObject;
@@ -230,6 +232,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             newObj.transform.GetComponent<PlayerInput>().camera.GetComponent<CameraFollow>().characterB = newObj.transform;
+            newObj.transform.GetComponent<PlayerInput>().defaultControlScheme = thisPlayer.transform.GetComponent<PlayerInput>().defaultControlScheme;
         }
     }
     
