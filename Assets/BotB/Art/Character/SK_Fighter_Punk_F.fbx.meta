@@ -23,7 +23,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftFoot' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -80,8 +81,669 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Plant_BaseGeo_3:Fighter_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Plant_BaseGeo_3:Fighter_RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: SK_Fighter_Punk_F(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fighter_Punk_F
+      parentName: SK_Fighter_Punk_F(Clone)
+      position: {x: -0, y: 0.9012525, z: -0.9130486}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_Reference
+      parentName: SK_Fighter_Punk_F(Clone)
+      position: {x: -0.000011940002, y: 0.011168537, z: 0.007977763}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_Hips
+      parentName: Plant_BaseGeo_3:Fighter_Reference
+      position: {x: -0.008775144, y: 0.9146395, z: -0.0000508225}
+      rotation: {x: 0.48140818, y: -0.5179251, z: -0.4818265, w: 0.51753557}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftUpLeg
+      parentName: Plant_BaseGeo_3:Fighter_Hips
+      position: {x: 0.0034925279, y: -0.0001790829, z: 0.08760635}
+      rotation: {x: 0.005944151, y: 0.002373199, z: 0.99995637, w: 0.006808918}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftLeg
+      parentName: Plant_BaseGeo_3:Fighter_LeftUpLeg
+      position: {x: -0.41263327, y: 0.000003581166, z: 0.0554953}
+      rotation: {x: -0.002721326, y: -0.000023340544, z: -0.060506355, w: 0.9981641}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightUpLeg
+      parentName: Plant_BaseGeo_3:Fighter_Hips
+      position: {x: 0.0034924857, y: -0.00017907939, z: -0.08760643}
+      rotation: {x: 0.00025006715, y: 0.00585732, z: -0.035714474, w: 0.9993449}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightLeg
+      parentName: Plant_BaseGeo_3:Fighter_RightUpLeg
+      position: {x: 0.41263357, y: -0.00000006245602, z: -0.066445656}
+      rotation: {x: -0.000025089223, y: -0.000000020816419, z: -0.00082635396, w: 0.9999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_Spine
+      parentName: Plant_BaseGeo_3:Fighter_Hips
+      position: {x: -0.2065928, y: 0.00000001497957, z: -7.7895174e-10}
+      rotation: {x: 0.00004535643, y: 0.00040168056, z: 0.040763125, w: 0.99916875}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_Spine1
+      parentName: Plant_BaseGeo_3:Fighter_Spine
+      position: {x: -0.18440638, y: -0.000000036380918, z: -0.00000001039352}
+      rotation: {x: -1.1573609e-22, y: 8.653967e-22, z: -0.041748427, w: 0.99912816}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftShoulder
+      parentName: Plant_BaseGeo_3:Fighter_Spine1
+      position: {x: -0.15323459, y: -0.02907324, z: 0.0757237}
+      rotation: {x: -0.48212767, y: 0.5172551, z: 0.48212767, w: 0.5172551}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftArm
+      parentName: Plant_BaseGeo_3:Fighter_LeftShoulder
+      position: {x: -0.113585696, y: 0.013479469, z: -0.0000000067760535}
+      rotation: {x: 0.7071068, y: -3.484157e-16, z: -3.87668e-16, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftForeArm
+      parentName: Plant_BaseGeo_3:Fighter_LeftArm
+      position: {x: -0.2730226, y: -0.000004225155, z: -0.0000088158995}
+      rotation: {x: -0.00065818423, y: 0.067870624, z: -0.009680328, w: 0.9976469}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHand
+      parentName: Plant_BaseGeo_3:Fighter_LeftForeArm
+      position: {x: -0.21453369, y: -0.004092718, z: -0.028226668}
+      rotation: {x: 0.110085025, y: -0.012819415, z: -0.039125815, w: 0.99306905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandIndex1
+      parentName: Plant_BaseGeo_3:Fighter_LeftHand
+      position: {x: -0.09755797, y: 0.00213124, z: 0.01032321}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandIndex2
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandIndex1
+      position: {x: -0.03804446, y: -0.001595979, z: 0.005984333}
+      rotation: {x: -0.06111881, y: 0.12456085, z: 0.035670236, w: 0.9896852}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandIndex3
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandIndex2
+      position: {x: -0.02436881, y: 0.0002494335, z: 0.00004297402}
+      rotation: {x: 0.003150916, y: -0.044235434, z: -0.02277187, w: 0.9987566}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandIndex4
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandIndex3
+      position: {x: -0.01982552, y: 0.00020285259, z: 0.00003560232}
+      rotation: {x: 0.059182998, y: -0.07934743, z: -0.015400038, w: 0.9949695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandMiddle1
+      parentName: Plant_BaseGeo_3:Fighter_LeftHand
+      position: {x: -0.1042547, y: -0.023487201, z: 0.015946459}
+      rotation: {x: -0.16333501, y: 0.12105624, z: 0.12899214, w: 0.97058135}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandMiddle2
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandMiddle1
+      position: {x: -0.029748999, y: -0.0008983319, z: -0.001281859}
+      rotation: {x: 0.09902153, y: -0.010398703, z: 0.006667179, w: 0.99500865}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandMiddle3
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandMiddle2
+      position: {x: -0.028272148, y: 0.0003732729, z: 0.001074113}
+      rotation: {x: -0.0040352526, y: 0.018667007, z: 0.023068942, w: 0.9995515}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandMiddle4
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandMiddle3
+      position: {x: -0.0217164, y: 0.0002220842, z: 0.00003679037}
+      rotation: {x: -0.029752448, y: 0.04880588, z: -0.024395099, w: 0.99806696}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandPinky1
+      parentName: Plant_BaseGeo_3:Fighter_LeftHand
+      position: {x: -0.07831981, y: -0.06341419, z: 0.02247611}
+      rotation: {x: -0.16869695, y: 0.146078, z: 0.36034134, w: 0.90573543}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandPinky2
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandPinky1
+      position: {x: -0.018901419, y: -0.002262112, z: 0.0016280849}
+      rotation: {x: 0.07264195, y: 0.13920446, z: 0.06059605, w: 0.98573494}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandPinky3
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandPinky2
+      position: {x: -0.01932776, y: 0.00019959209, z: 0.00004070074}
+      rotation: {x: 0.023792176, y: -0.09739602, z: -0.04982631, w: 0.9937129}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandPinky4
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandPinky3
+      position: {x: -0.01707528, y: 0.0001740434, z: 0.00003164716}
+      rotation: {x: -0.034604702, y: -0.083652005, z: 0.117670365, w: 0.9889179}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandRing1
+      parentName: Plant_BaseGeo_3:Fighter_LeftHand
+      position: {x: -0.0954574, y: -0.046261456, z: 0.020039301}
+      rotation: {x: -0.2129848, y: 0.1260454, z: 0.30467612, w: 0.91974044}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandRing2
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandRing1
+      position: {x: -0.029311148, y: 0.0013121469, z: 0.0011060219}
+      rotation: {x: 0.149232, y: 0.04261205, z: -0.013521104, w: 0.98779106}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandRing3
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandRing2
+      position: {x: -0.02308942, y: 0.00023665628, z: 0.00004228548}
+      rotation: {x: 0.00564121, y: -0.039025486, z: -0.020086275, w: 0.9990204}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandRing4
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandRing3
+      position: {x: -0.018787129, y: 0.00019218249, z: 0.00003153102}
+      rotation: {x: 0.030877953, y: -0.089796685, z: 0.048474874, w: 0.9943004}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandThumb1
+      parentName: Plant_BaseGeo_3:Fighter_LeftHand
+      position: {x: -0.05977538, y: 0.04807697, z: 0.02750513}
+      rotation: {x: 0.3883505, y: 0.0107663935, z: -0.39314988, w: 0.83336735}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandThumb2
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandThumb1
+      position: {x: -0.025847621, y: -0.001005578, z: 0.001826331}
+      rotation: {x: 0.13950147, y: -0.010087634, z: 0.028187566, w: 0.9897692}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_LeftHandThumb3
+      parentName: Plant_BaseGeo_3:Fighter_LeftHandThumb2
+      position: {x: -0.027674338, y: -0.001041518, z: 0.00170414}
+      rotation: {x: -0.07718461, y: -0.08199863, z: 0.098691285, w: 0.9887259}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_Neck
+      parentName: Plant_BaseGeo_3:Fighter_Spine1
+      position: {x: -0.21133849, y: -0.00000003840967, z: -0.00000001195593}
+      rotation: {x: 5.242175e-23, y: 7.386248e-24, z: -0.20870279, w: 0.9779791}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_Head
+      parentName: Plant_BaseGeo_3:Fighter_Neck
+      position: {x: -0.09572087, y: -0.000000032470698, z: -0.0000000049985047}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightShoulder
+      parentName: Plant_BaseGeo_3:Fighter_Spine1
+      position: {x: -0.15323459, y: -0.02907324, z: -0.0757237}
+      rotation: {x: 0.5172552, y: 0.48212773, z: -0.5172552, w: 0.48212773}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightArm
+      parentName: Plant_BaseGeo_3:Fighter_RightShoulder
+      position: {x: 0.113585696, y: -0.01347945, z: 0.000000004718901}
+      rotation: {x: 0.7071068, y: -4.449123e-18, z: 3.0783705e-17, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightForeArm
+      parentName: Plant_BaseGeo_3:Fighter_RightArm
+      position: {x: 0.27303398, y: 0.0000022006534, z: 0.0000039283186}
+      rotation: {x: -0.00042045096, y: 0.052447043, z: -0.008008011, w: 0.9985916}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHand
+      parentName: Plant_BaseGeo_3:Fighter_RightForeArm
+      position: {x: 0.2199019, y: 0.003476325, z: 0.02653805}
+      rotation: {x: 0.09242528, y: -0.020907149, z: -0.031084, w: 0.9950147}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandIndex1
+      parentName: Plant_BaseGeo_3:Fighter_RightHand
+      position: {x: 0.09755786, y: -0.002131523, z: -0.01032428}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandIndex2
+      parentName: Plant_BaseGeo_3:Fighter_RightHandIndex1
+      position: {x: 0.0380448, y: 0.00159618, z: -0.0059834346}
+      rotation: {x: 0.062325917, y: 0.7697511, z: 0.6252125, w: -0.11273024}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandIndex3
+      parentName: Plant_BaseGeo_3:Fighter_RightHandIndex2
+      position: {x: -0.024369339, y: -0.0000001550021, z: -7.4884474e-11}
+      rotation: {x: -0.0036444631, y: -0.02630115, z: -0.042192746, w: 0.9987566}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandIndex4
+      parentName: Plant_BaseGeo_3:Fighter_RightHandIndex3
+      position: {x: -0.019826649, y: 0.000000036493848, z: 2.742317e-10}
+      rotation: {x: 0.04662513, y: 0.77211004, z: 0.63035756, w: 0.06573812}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandMiddle1
+      parentName: Plant_BaseGeo_3:Fighter_RightHand
+      position: {x: 0.10425399, y: 0.023486909, z: -0.015947489}
+      rotation: {x: -5.8286714e-16, y: 2.553513e-15, z: 1.7416624e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandMiddle2
+      parentName: Plant_BaseGeo_3:Fighter_RightHandMiddle1
+      position: {x: 0.027874209, y: 0.0075387815, z: -0.007328479}
+      rotation: {x: -0.0032947771, y: 0.7668448, z: 0.6181533, w: -0.17269872}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandMiddle3
+      parentName: Plant_BaseGeo_3:Fighter_RightHandMiddle2
+      position: {x: -0.02827521, y: -0.001021325, z: -0.00000002652704}
+      rotation: {x: 0.004267607, y: 0.024506118, z: 0.016677953, w: 0.9995515}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandMiddle4
+      parentName: Plant_BaseGeo_3:Fighter_RightHandMiddle3
+      position: {x: -0.021717638, y: -0.0000001060738, z: 0.00000002483446}
+      rotation: {x: -0.0063894973, y: 0.7649616, z: 0.61164236, w: 0.20170905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandPinky1
+      parentName: Plant_BaseGeo_3:Fighter_RightHand
+      position: {x: 0.078319356, y: 0.06341416, z: -0.02247721}
+      rotation: {x: -2.7755576e-17, y: 1.3877788e-17, z: 1.6930901e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandPinky2
+      parentName: Plant_BaseGeo_3:Fighter_RightHandPinky1
+      position: {x: 0.011365539, y: 0.012281939, z: -0.009221864}
+      rotation: {x: -0.06546842, y: 0.73318225, z: 0.48012412, w: -0.47711477}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandPinky3
+      parentName: Plant_BaseGeo_3:Fighter_RightHandPinky2
+      position: {x: -0.01932566, y: -0.00000006089278, z: -0.00000004323706}
+      rotation: {x: -0.024877379, y: -0.057553664, z: -0.09275455, w: 0.9937129}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandRing1
+      parentName: Plant_BaseGeo_3:Fighter_RightHand
+      position: {x: 0.095457084, y: 0.04626124, z: -0.02004038}
+      rotation: {x: -1.8596236e-15, y: -1.7347235e-16, z: 1.4953316e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandRing2
+      parentName: Plant_BaseGeo_3:Fighter_RightHandRing1
+      position: {x: 0.02363101, y: 0.01338496, z: -0.011160869}
+      rotation: {x: -0.048036736, y: 0.75181234, z: 0.5715378, w: -0.3252925}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandRing3
+      parentName: Plant_BaseGeo_3:Fighter_RightHandRing2
+      position: {x: -0.02308997, y: 0.00000009256676, z: -0.0000000262733}
+      rotation: {x: -0.006076467, y: -0.023192372, z: -0.037194904, w: 0.9990204}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandRing4
+      parentName: Plant_BaseGeo_3:Fighter_RightHandRing3
+      position: {x: -0.018788349, y: 0.00000005853055, z: 2.2955399e-10}
+      rotation: {x: -0.06072132, y: 0.75336057, z: 0.5887596, w: 0.28657112}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandThumb1
+      parentName: Plant_BaseGeo_3:Fighter_RightHand
+      position: {x: 0.05977505, y: -0.04807818, z: -0.02751071}
+      rotation: {x: -4.82947e-15, y: 2.1371793e-15, z: 6.078471e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandThumb2
+      parentName: Plant_BaseGeo_3:Fighter_RightHandThumb1
+      position: {x: 0.01904368, y: -0.01513093, z: -0.008983352}
+      rotation: {x: 0.3274588, y: 0.6917634, z: 0.63458866, w: 0.10738425}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plant_BaseGeo_3:Fighter_RightHandThumb3
+      parentName: Plant_BaseGeo_3:Fighter_RightHandThumb2
+      position: {x: -0.02774691, y: 0.000000058010716, z: 0.000000007247525}
+      rotation: {x: 0.35346, y: 0.6865131, z: 0.6210739, w: -0.13428704}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
