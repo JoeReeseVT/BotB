@@ -22,7 +22,7 @@ public class SelectionScript : MonoBehaviour
 
     void Awake()
     {
-        currentState = MenuStates.Player1;
+        currentState = MenuStates.Song;
     }
 
     void Update()
