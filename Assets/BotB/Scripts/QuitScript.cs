@@ -10,5 +10,7 @@ public class QuitScript : MonoBehaviour
     {
         Application.Quit();
     }
-
+    public void RollCredits() {
+        Application.OpenURL("https://battleoftheband.wixsite.com/botb");
+    }
 }
